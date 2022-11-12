@@ -1,0 +1,89 @@
+import Link from "next/link";
+import React from "react";
+import { FcGoogle } from "react-icons/fc";
+import { IoLogoFacebook } from "react-icons/io";
+import { BsEnvelope } from "react-icons/bs";
+import { AiFillApple } from "react-icons/ai";
+import { BsTwitter } from "react-icons/bs";
+
+interface LoginProps {
+  changeState: React.MouseEventHandler<HTMLButtonElement> | undefined;
+}
+function Login({ changeState }: LoginProps) {
+  return (
+    <div className="h-screen w-screen text-center ">
+      <div className="lg:shadow-2xl lg:max-w-2xl lg:mx-auto  h-full bigScreen  flex flex-col justify-center items-center">
+        <div className="tp -translate-y-10 mb-5  text-center ">
+          <h2 className="  text-3xl font-medium  ">Welcome back</h2>
+          <p className=" mt-5 "> Sign in to follow Post</p>
+        </div>
+
+        <div className="social space-y-3 relative">
+          <Link href=" https://medium.com/m/connect/google?state=google-%7Chttps%3A%2F%2Fmedium.com%2Fnew-story%3Fsource%3Dregister-------------------------------------%7Cregister&source=register-------------------------------------">
+            <a className="w-full  space-x-2 flex  items-center py-2 px-4 border border-gray-400   rounded-full text-gray-600 hover:text-gray-800 hover:border-gray-600">
+              <FcGoogle />
+              <p> Sign up with Google</p>
+            </a>
+          </Link>
+          <Link href=" https://medium.com/m/connect/google?state=google-%7Chttps%3A%2F%2Fmedium.com%2Fnew-story%3Fsource%3Dregister-------------------------------------%7Cregister&source=register-------------------------------------">
+            <a className=" w-full space-x-2 flex  items-center py-2 px-4 border border-gray-400   rounded-full text-gray-600 hover:text-gray-800 hover:border-gray-600">
+              <AiFillApple />
+              <p> Sign up with Apple</p>
+            </a>
+          </Link>
+          <Link href=" https://medium.com/m/connect/google?state=google-%7Chttps%3A%2F%2Fmedium.com%2Fnew-story%3Fsource%3Dregister-------------------------------------%7Cregister&source=register-------------------------------------">
+            <a className=" w-full space-x-2 flex  items-center py-2 px-4 border border-gray-400   rounded-full text-gray-600 hover:text-gray-800 hover:border-gray-600">
+              <BsTwitter />
+              <p> Sign up with Twitter</p>
+            </a>
+          </Link>
+          <Link href=" https://medium.com/m/connect/google?state=google-%7Chttps%3A%2F%2Fmedium.com%2Fnew-story%3Fsource%3Dregister-------------------------------------%7Cregister&source=register-------------------------------------">
+            <a className=" w-full space-x-2 flex  items-center py-2 px-4 border border-gray-400   rounded-full text-gray-600 hover:text-gray-800 hover:border-gray-600">
+              <IoLogoFacebook />
+              <p> Sign up with Facebook</p>
+            </a>
+          </Link>
+          <Link href=" https://medium.com/m/connect/google?state=google-%7Chttps%3A%2F%2Fmedium.com%2Fnew-story%3Fsource%3Dregister-------------------------------------%7Cregister&source=register-------------------------------------">
+            <a className="w-full space-x-2 flex  items-center py-2 px-4 border border-gray-400  rounded-full text-gray-600 hover:text-gray-800 hover:border-gray-600">
+              <BsEnvelope />
+              <p> Sign up with Email</p>
+            </a>
+          </Link>
+        </div>
+
+        <div className="btn flex  text-sm mt-10 text-gray-600 font-medium  ">
+          <p> No account ? </p>
+          <button
+            onClick={changeState}
+            className="ml-1 text-md text-green-600 font-bold hover:text-green-800 "
+          >
+            Create one
+          </button>
+        </div>
+
+        <div className="gethelp flex  text-center relative w-[80%] mx-auto text-sm mt-10 text-gray-600 font-medium  ">
+          <p className="text-center"> Forgot email or trouble signing in? </p>
+          <Link href="https://help.medium.com/hc/en-us/requests/new?ticket_form_id=9455427953559&form=true&source=login--------------------------follow_footer-----------">
+            <a className=" underline ">Get help </a>
+          </Link>
+        </div>
+
+        <div className="notice text-center relative w-[80%] mx-auto translate-y-14 ">
+          <p className=" relative text-sm text-gray-400 ">
+            Click “Sign Up” to agree to Medium’s
+            <Link href="https://policy.medium.com/medium-terms-of-service-9db0094a1e0f?source=register-------------------------------------">
+              <a className="underline  ">Terms of Service</a>
+            </Link>
+            and acknowledge that Medium’s
+            <Link href="https://policy.medium.com/medium-privacy-policy-f03bf92035c9?source=register-------------------------------------">
+              <a className=" underline "> Privacy Policy</a>
+            </Link>
+            Privacy Policy applies to you.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Login;
