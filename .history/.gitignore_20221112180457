@@ -6,6 +6,7 @@
 .pnp.js
 
 sanity-ytt/node_modules
+sanity-ytt/dist
 
 
 # testing
